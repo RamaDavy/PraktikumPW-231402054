@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P.proweb</title>
+    <link rel="stylesheet" href="p.prowebq.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="r.png" alt="Logo" class="img">
+        <ul class="samping">
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div>
+        <div class="container">
+            <img src="foto2.jfif" class="foto" alt="Foto">
+            <div class="info">
+                <h2 class="judul">INTRODUCTION</h2>
+                <p>Perkenalkan, saya Rama Davy Fahrezy Kacaribu.Saya merupakan mahasiswa
+                    dari prodi S-1 Teknologi Informasi yang berada di Universitas Sumatera Utara.
+                    Alasan saya untuk masuk ke dalam prodi Teknologi Informasi adalah karena
+                    saya memiliki ketertarikan kepada bidang programming. Harapan saya kedepannya
+                    adalah semoga dengan belajar disini saya dapat menguasai berbagai hal yang berhubungan
+                    dengan teknologi.
+
+                </p>
+            </div>
+        </div>
+
+        <button id="ubahTeksButton" class="button" onclick="ubahTeks()">Ubah Teks</button>
+
+        <script>
+            var judul = document.querySelector('.judul');
+            var teks = document.querySelector('p');
+            var teksAwalH2 = judul.textContent;
+            var teksAwalP = teks.textContent;
+            var isTeksDiubah = false;
+    
+            function ubahTeks() {
+                if (isTeksDiubah) {
+                    judul.textContent = teksAwalH2;
+                    teks.textContent = teksAwalP;
+                    isTeksDiubah = false;
+                } else {
+                    judul.textContent = "Contact";
+                    teks.innerHTML = "<br> Email : ramadavy1@gmail.com.....................................................................................................................<br>phone : 0831-8957-1369...................................................................................................................................";
+                    isTeksDiubah = true;
+                }
+            }
+        </script>
+</html>
